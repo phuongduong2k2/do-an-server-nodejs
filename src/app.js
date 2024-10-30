@@ -19,13 +19,14 @@ const client = mqtt.connect(mqttBrokerAddress);
 
 // send message to raspi to control servo
 app.post('/control-servo/:id', (req, res) => {
-  const message = `servo${req.params.id}`;
-
-  console.log(req.body);
   //   req.body = {
   //     id: 1, <-- id servo cần điều khiển
   //     degree: 180, <-- góc
   //   };
+
+  const servoId = req.body.id;
+  const degree = req.body.degree;
+  const message = `servo:${servoId}:${degree}`;
 
   client.publish(mqttChannel, message, () => {
     console.log(`Message published to ${mqttChannel}:${message}`);
