@@ -69,4 +69,4 @@ print("Listening forever")
 ...
 ```
 # Video ví dụ về cách kết nối giao thức mqtt
-[https://www.youtube.com/watch?v=OQC9ZYkeKNI](adasd)
+[vi rút](https://www.youtube.com/watch?v=OQC9ZYkeKNI)
